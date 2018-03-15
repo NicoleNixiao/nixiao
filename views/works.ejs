@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nixiao</title>
+    <link rel="stylesheet" href="/css/works.css">
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/vue.min.js"></script>
+</head>
+<body>
+    <% include header.ejs %>
+    <section class="works">
+        <div class="center-block paddingt20">
+            <!-- 粒子动画 start -->
+            <section class="particle">
+                <div class="container">
+                    <div id="particles-js"></div>
+                </div>
+                <div class="sun">
+                    <div class="earth"></div>
+                    <div class="other"></div>
+                </div>
+                <img class="works-title" src="/images/works/Boutiquecase.png" alt="">
+            </section>
+        <!-- 粒子动画 end -->
+            <!-- 作品展示 -->
+            <div class="boutique">
+                <p class="boutique1">
+                    <a href="http://hongyinfund.p2peye.com/" style="display:block;" target="_blank" title="点击查看官网。友情提示：该网站不再维护但依然可浏览，敬告：理财须谨慎哇同学们">
+                        <img class="works-title" src="/images/works/hongying.png" alt="">
+                    </a>
+                </p>
+                <p class="boutique2">
+                    <img class="works-title" data-num="0" src="/images/works/kazilan.png" alt="" @mouseover="Show($event)">
+                    <span class="boutique-show boutique-show0" @click.prevent = "stopShow($event)">
+                        <img src="/images/works/1.jpg" alt="" @click.stop>
+                    </span>
+                </p>
+                <p class="boutique3">
+                    <img class="works-title" data-num="1" src="/images/works/yaojing.png" alt="" @mouseover="Show($event)">
+                    <span class="boutique-show boutique-show1" @click.prevent = "stopShow($event)">
+                        <img src="/images/works/2.jpg" alt="" @click.stop>
+                    </span>
+                </p>
+                <p class="boutique4">
+                    <a href="http://www.ibeifeng.net/#/" style="display:block;" target="_blank" title="点击查看直播平台">
+                        <img class="works-title" src="/images/works/live.png" alt="">
+                    </a>
+                </p>
+                <p class="boutique5">
+                    <img class="works-title" data-num="2" src="/images/works/phoneapp.png" alt="" @mouseover="Show($event)">
+                    <span class="boutique-show boutique-show2" @click.prevent = "stopShow($event)">
+                        <img src="/images/works/5.jpg" alt="" @click.stop>
+                    </span>
+                </p>
+                <p class="boutique6 active">
+                    <a href="http://www.ibeifeng.com/" style="display:block;" target="_blank" title="点击查看官网">
+                        <img class="works-title" src="/images/works/beifengpic_03.png" alt="">
+                    </a>
+                </p>
+                <p class="boutique7">
+                    <a href="http://www.jinyinmao.com.cn/" style="display:block;" target="_blank" title="点击查看官网">
+                        <img class="works-title" src="/images/works/jinyingmao_03.png" alt="">
+                    </a>
+                </p>
+                <p class="boutique8">
+                    <a href="http://www.ibeifeng.com/" style="display:block;" target="_blank" title="如果pc端请F12，或在移动端浏览器输入地址www.ibeifeng.com">
+                        <img class="works-title" src="/images/works/phone.png" alt="">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>   
+</body>
+<script src="/js/service/particles.js"></script>
+<script src="/js/service/app.js"></script>
+<script>
+        //设置service屏幕高度
+        var screenH = window.screen.availHeight;
+        var works = document.getElementsByClassName("works");
+        setScreenHeight(works[0],screenH);
+
+        //设置canvas的高度
+        var canvas = document.getElementsByTagName("canvas")[0];
+        // canvas.height = 165;
+        // canvas.width = 435;
+</script>
+<script>
+    new Vue({
+        el:".boutique",
+        methods:{
+            stopShow:function(e){
+                e.cancelBubble = true;
+                e.target.style.display = "none";
+            },
+            Show:function(e){
+                let index = e.target.getAttribute("data-num");
+                $(".boutique-show").eq(index).css("display","block");
+                $(".boutique-show").eq(index).$("img").css("display","block");
+            }
+        }
+    })
+</script>
+</html>

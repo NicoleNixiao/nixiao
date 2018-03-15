@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nixiao</title>
+    <link rel="stylesheet" href="/css/skills.css">
+    <script src="/js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <% include header.ejs %>
+    <section class="skills">
+        <div class="center-block paddingt20">
+            <!-- 粒子动画 start -->
+            <section class="particle">
+                <div class="container">
+                    <div id="particles-js"></div>
+                </div>
+                <div class="sun">
+                    <div class="earth"></div>
+                    <div class="other"></div>
+                </div>
+                <img class="skills-title" src="/images/service/Professionalskills.png" alt="">
+            </section>
+            <ul class="skills-line">
+                <li class="cir1">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/express.png" alt="">
+                        <span class="explain">能够运用node及express做数据渲染和路由跳转</span>
+                    </p>
+                    <span class="row-line"></span>
+                    <img class="introduce" src="/images/skills/node.png" alt="">
+                </li>
+                <li class="cir2">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/vue.png" alt="">
+                        <span class="explain">能够运用vue进行dom操作/动画效果/封装组件等常见操作</span>
+                    </p>                
+                </li>
+                <li class="cir3">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/canvas.png" alt="">
+                        <span class="explain">能够运用H5画布画几何形状并设计动画</span>
+                    </p>
+                    <span class="row-line"></span>
+                    <img class="introduce" src="/images/skills/use.png" alt="">
+                </li>
+                <li class="cir4">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/htmlcssjs.png" alt="">
+                        <span class="explain">能够灵活运用前端语言设计页面</span>
+                    </p>
+                    <span class="row-line"></span>
+                    <img class="introduce" src="/images/skills/HTM.png" alt="">
+                </li>
+                <li class="cir5">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/ajax.png" alt="">
+                        <span class="explain">能够熟练运用ajax请求/上传数据</span>
+                    </p>                
+                </li>
+                <li class="cir6">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/lessbootstrapsass.png" alt="">
+                        <span class="explain">能够熟练封装css组件及页面布局</span>
+                    </p>
+                    <span class="row-line"></span>
+                    <img class="introduce" src="/images/skills/front.png" alt="">
+                </li>
+                <li class="cir7">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/webpack.png" alt="">
+                        <span class="explain">能够运用webpack打包模块</span>
+                    </p>                
+                </li>
+                <li class="cir8">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/npm.png" alt="">
+                        <span class="explain">能够运用git与团队同步开发，能够运用mongodb操作数据库，运用npm操作模块工具</span>
+                    </p>
+                    <span class="row-line"></span>
+                    <img class="introduce" src="/images/skills/controller.png" alt="">
+                </li>
+                <li class="cir9">
+                    <p class="circle">
+                        <img class="text-img" src="/images/skills/ect....png" alt="">
+                        <span class="explain">jquery：能够熟练使用jquery设计界面。
+                            响应式交互：能够熟练制作响应式网站。
+                            json：能够熟练使用json。
+                            Regexp：能够能够运用常见操作。
+                            Gulp：能够运用gulp压缩文件
+                            PS/AI/FW/AE:能够运用以上软件做一些简单的平面设计、简短动画及视频剪辑。
+                            </span>
+                    </p>                
+                </li>
+            </ul>
+            <p id="modalWindow"></p>
+        <!-- 粒子动画 end -->
+        <!-- 绘画三角形 -->
+        
+        </div>
+    </section>   
+</body>
+<script src="/js/service/particles.js"></script>
+<script src="/js/service/app.js"></script>
+<script>
+        //设置service屏幕高度
+        var screenH = window.screen.availHeight;
+        var skills = document.getElementsByClassName("skills");
+        setScreenHeight(skills[0],screenH);
+
+         //设置canvas的高度
+        var canvas = document.getElementsByTagName("canvas")[0];
+
+        let modalWindow = document.getElementById("modalWindow");
+        modalWindow.style.top = "2000px";
+        
+
+        
+       
+</script>
+</html>

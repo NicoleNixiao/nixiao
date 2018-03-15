@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nixiao</title>
+    <link rel="stylesheet" href="/css/service.css">
+    <script src="/js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <% include header.ejs %>
+    <section class="service">
+        <div class="center-block paddingt55">
+            <!-- 粒子动画 start -->
+            <section class="particle">
+                <div class="container">
+                    <div id="particles-js"></div>
+                </div>
+                <div class="sun">
+                    <div class="earth"></div>
+                    <div class="other"></div>
+                </div>
+                <img class="service-title" src="/images/service/myservice.png" alt="">
+            </section>
+        <!-- 粒子动画 end -->
+        <!-- 绘画三角形 -->
+        <section id="triangleBG">
+            <canvas id="triangle1" ></canvas>
+            <canvas id="triangle2" ></canvas>
+            <canvas id="triangle3" ></canvas>
+            <canvas id="triangle4" ></canvas>
+        </section>
+        </div>
+    </section>   
+</body>
+<script src="/js/service/particles.js"></script>
+<script src="/js/service/app.js"></script>
+<script>
+        //设置service屏幕高度
+        var screenH = window.screen.availHeight;
+        var service = document.getElementsByClassName("service");
+        setScreenHeight(service[0],screenH);
+
+         //设置canvas的高度
+        var canvas = document.getElementsByTagName("canvas")[0];
+        // canvas.height = 165;
+        // canvas.width = 435;
+        
+        //设置三角形背景
+        // const triangle = document.getElementById("triangleBG");
+        // const cxt = triangle.getContext("2d"); 
+        // cxt.fillStyle="";
+        // cxt.fillRect(0,0,1000,352);
+
+        //画三角函数
+        const triangle1 = document.getElementById("triangle1");
+        const triangle2 = document.getElementById("triangle2");
+        const triangle3 = document.getElementById("triangle3");
+        const triangle4 = document.getElementById("triangle4");
+        const cxt1 = triangle1.getContext("2d");
+        const cxt2 = triangle2.getContext("2d");
+        const cxt3 = triangle3.getContext("2d");
+        const cxt4 = triangle4.getContext("2d");
+        triangle1.height = 352;
+        triangle2.height = 352;
+        triangle3.height = 352;
+        triangle4.height = 352;
+        triangle1.width = 250;
+        triangle2.width = 250;
+        triangle3.width = 250;
+        triangle4.width = 250;
+        
+        draw(cxt1,100,30,187,88,117,218,'#8490c8','fill');
+        draw(cxt2,50,56,233,87,37,163,'#8490c8','fill');
+        draw(cxt3,205,0,57,92,121,173,'#8490c8','fill');
+        draw(cxt4,97,26,177,79,102,203,'#8490c8','fill');
+
+       imgObj("/images/service/music_record.png",109, 70,triangle1);
+       imgObj("/images/service/software.png",99, 239,triangle1);
+       imgObj("/images/service/earth.png",54, 69,triangle2);
+       imgObj("/images/service/development.png",81, 239,triangle2);
+       imgObj("/images/service/phone.png",100, 77,triangle3);
+       imgObj("/images/service/APP.png",87, 239,triangle3);
+       imgObj("/images/service/Pentagon.png",111, 73,triangle4);
+       imgObj("/images/service/flat.png",95, 239,triangle4);
+       
+
+       //canvas加载图片
+        function imgObj(src,imgX,imgY,cvs){
+            var imgObj = new Image();
+            imgObj.src = src;
+            //待图片加载完后，将其显示在canvas上
+            imgObj.onload = function(){
+                var ctx = cvs.getContext('2d');
+                ctx.drawImage(this,imgX,imgY );//this即是imgObj,保持图片的原始大小：470*480
+                //ctx.drawImage(this, 0, 0,1024,768);//改变图片的大小到1024*768
+            }
+        }
+
+        //画三角形
+        function draw(ctx,x1, y1, x2, y2, x3, y3, color, type) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.lineTo(x3, y3);
+            ctx[type + 'Style'] = color;
+            ctx.closePath();
+            ctx[type]();
+        }
+
+     
+</script>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nixiao</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/jquery.ripples.js"></script> 
+    <script src="/js/index.js"></script>  
+</head>
+<style>
+    .nav-span:nth-of-type(1){transform: translateY(-7px) rotateY(-15deg)}
+    .nav-span:nth-of-type(2){transform: translateY(7px) rotateY(15deg)}
+    .nav-span:nth-of-type(3){transform: translateY(-7px) rotateY(-15deg)}
+    .nav-span:nth-of-type(4){transform: translateY(7px) rotateY(15deg)}
+    .nav-span:nth-of-type(5){transform: translateY(-7px) rotateY(-15deg)}
+</style>
+<body>
+    <% include header.ejs %>
+    <section class="img-banner">   
+        <div class="center-block">
+            <img class="base-on-title" id="baseOnTitle" src="/images/title_03.png" alt="">
+            <img class="poem" id="poem" src="/images/base_07.png" alt=""> 
+        </div>
+    </section>
+<script>
+    $('.img-banner').ripples({
+        resolution: 512,
+        dropRadius: 20, //px
+        perturbance: 0.04,
+    });
+</script>    
+<script>
+    window.onload = function(){
+        //设置首页屏幕高度
+        var screenH = window.screen.availHeight;
+        var imgBanner = document.getElementsByClassName("img-banner");
+        setScreenHeight(imgBanner[0],screenH)
+        //设置首页文字的初始动画
+        var baseOnTitle = document.getElementById("baseOnTitle");
+        var poem = document.getElementById("poem");
+        baseOnTitle.style.transform = "translateY(0)";
+        baseOnTitle.style.opacity = 1;
+        poem.style.transform = "translateY(0)";
+        poem.style.opacity = 1;
+
+        //设置canvas的高度
+       var canvas = document.getElementsByTagName("canvas")[0];
+       canvas.height = screenH;
+
+       //导航栏的当前位置
+        // var navspans = document.getElementsByClassName("nav-span");
+        // var spanWidth = navspans[0].offsetWidth;
+        // var b = document.getElementsByClassName("light-line")[0];
+     
+        
+        
+        // //当前位置跟随
+        // var navspans = document.getElementsByClassName("nav-span");
+        // var spanWidth = navspans[0].offsetWidth;
+        // var b = document.getElementsByClassName("light-line")[0];
+        // var count = 0;
+        // for(var i=0;i<navspans.length;i++){
+        //     navspans[i].index = i;
+        //     if(navspans[i].firstChild.getAttribute("class") != null ){
+        //         var special = i;
+        //     }
+        //     navspans[i].onmouseover = function () {
+        //         animate(b,this.index*spanWidth);
+        //         for(var j = 0;j<navspans.length;j++){
+        //             navspans[j].firstChild.setAttribute("class"," ");
+        //         }
+        //         this.firstChild.setAttribute("class","active");
+        //     }
+        //     navspans[i].onmouseout = function () {
+        //         animate(b,count*spanWidth);
+        //         for(var j = 0;j<navspans.length;j++){
+        //             navspans[j].firstChild.setAttribute("class"," ");
+        //         }
+        //         navspans[special].firstChild.setAttribute("class","active");
+        //     }
+        //     navspans[i].onclick = function () {
+        //         count = this.index;
+        //         special = count;
+        //         animate(b,count*spanWidth);
+        //         for(var j = 0;j<navspans.length;j++){
+        //             navspans[j].firstChild.setAttribute("class"," ");
+        //         }
+        //         navspans[special].firstChild.setAttribute("class","active");
+        //     }
+
+        // }
+
+        // //设置鼠标hover移除nav的效果
+        // var nav = document.getElementById("nav");
+        // nav.onmouseover = function(){
+        //     for(var j=0;j<navspans.length;j++){
+        //         navspans[j].style.transform = "translateY(0) rotateY(0deg)";
+        //     }
+        //     b.style.opacity = 1;
+        // }
+       
+
+        // //缓动动画封装
+        // function animate(ele,target) {
+        //     clearInterval(ele.timer);
+        //     ele.timer = setInterval(function () {
+        //         var step = (target-ele.offsetLeft)/10;
+        //         step = step>0?Math.ceil(step):Math.floor(step);
+        //         ele.style.left = ele.offsetLeft + step + "px";
+        //         if(Math.abs(target-ele.offsetLeft)<Math.abs(step)){
+        //             ele.style.left = target + "px";
+        //             clearInterval(ele.timer);
+        //         }
+        //     },18);
+        // }
+
+    
+
+       //设置service模块的canvas大小
+    //    var  particlesJs = document.getElementById("particles-js");
+    //    alert(particlesJs.tagName);
+
+    }
+</script>
+</body>
+</html>

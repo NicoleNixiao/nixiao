@@ -1,0 +1,193 @@
+@import 'reset.css';
+@import 'public.css';
+.works {
+  background-color: #fafafa;
+}
+.particle {
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+.works-title {
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 28%;
+}
+.paddingt20 {
+  padding-top: 20px;
+}
+.boutique {
+  width: 806px;
+  height: 100%;
+  margin: 25px auto;
+  position: relative;
+}
+.boutique-show {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.boutique-show img {
+  display: inline-block;
+  transform: translateY(50%);
+}
+.boutique:hover p {
+  animation: none;
+}
+.boutique1 {
+  position: absolute;
+  top: 0;
+  left: 204px;
+  cursor: pointer;
+  animation: boutiqueAnimation 8s infinite linear;
+}
+.boutique2 {
+  position: absolute;
+  top: 107px;
+  left: 332px;
+  cursor: pointer;
+  animation: boutiqueAnimation 9s infinite linear;
+}
+.boutique2 .boutique-show {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.boutique2 .boutique-show img {
+  display: inline-block;
+  transform: translateY(50%);
+}
+.boutique3 {
+  position: absolute;
+  top: 40px;
+  left: 554px;
+  cursor: pointer;
+  animation: boutiqueAnimation 5s infinite linear;
+}
+.boutique3 .boutique-show {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.boutique3 .boutique-show img {
+  display: inline-block;
+  transform: translateY(50%);
+}
+.boutique4 {
+  position: absolute;
+  top: 192px;
+  left: 98px;
+  cursor: pointer;
+  animation: boutiqueAnimation 8s infinite linear;
+}
+.boutique4 .boutique-show {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.boutique4 .boutique-show img {
+  display: inline-block;
+  transform: translateY(50%);
+}
+.boutique5 {
+  position: absolute;
+  top: 301px;
+  left: 202px;
+  cursor: pointer;
+  animation: boutiqueAnimation 8s infinite linear;
+}
+.boutique5 .boutique-show {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.boutique5 .boutique-show img {
+  display: inline-block;
+  transform: translateY(50%);
+}
+.boutique6 {
+  position: absolute;
+  top: 301px;
+  left: 458px;
+  cursor: pointer;
+  animation: boutiqueAnimation 12s infinite linear;
+}
+.boutique7 {
+  position: absolute;
+  top: 223px;
+  left: 732px;
+  cursor: pointer;
+  animation: boutiqueAnimation 9s infinite linear;
+}
+.boutique8 {
+  position: absolute;
+  top: 399px;
+  left: 645px;
+  cursor: pointer;
+  animation: boutiqueAnimation 7s infinite linear;
+}
+.boutique8 .boutique-show {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.boutique8 .boutique-show img {
+  display: inline-block;
+  transform: translateY(50%);
+}
+@keyframes boutiqueAnimation {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  50% {
+    transform: rotateZ(5deg);
+  }
+  75% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}

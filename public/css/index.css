@@ -1,0 +1,35 @@
+@import 'reset.css';
+@import 'public.css';
+.img-banner {
+  width: 100%;
+  background: url("/images/banner_02.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 142px;
+}
+.base-on-title {
+  margin-bottom: 74px;
+  opacity: 0;
+  transform: translateY(-400px);
+  transition: transform 0.8s,opacity 4s;
+}
+.poem {
+  transform: translateY(800px);
+  opacity: 0;
+  transition: transform 0.8s,opacity 2.2s;
+  transition-delay: 0.3s;
+}
+.text-box {
+  overflow: hidden;
+}
+header > .center-block {
+  position: relative;
+}
+header > .center-block h1 {
+  padding-left: 66px;
+}
+.mylogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}

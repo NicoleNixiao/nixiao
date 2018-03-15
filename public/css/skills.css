@@ -1,0 +1,432 @@
+@import 'reset.css';
+@import 'public.css';
+.skills {
+  background-color: #191b1f;
+}
+.particle {
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+.skills-title {
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+}
+.paddingt20 {
+  padding-top: 20px;
+}
+.skills-line {
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+.skills-line li {
+  display: block;
+}
+.skills-line .cir1 {
+  margin-bottom: 20px;
+}
+.skills-line .cir1 .circle {
+  width: 67px;
+  height: 67px;
+  background: #ffe850;
+  border-radius: 50%;
+  line-height: 69px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir1 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir1 .circle .explain {
+  position: absolute;
+  top: 5px;
+  left: -188px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir1 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir1 .row-line {
+  width: 90px;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  float: left;
+  transform: translateY(-33px);
+  margin-left: 33px;
+}
+.skills-line .cir1 .introduce {
+  float: left;
+  transform: translateY(-42px);
+  margin-left: 133px;
+}
+.skills-line .cir2 {
+  margin-bottom: 11px;
+}
+.skills-line .cir2 .circle {
+  width: 36px;
+  height: 36px;
+  background: #0099ca;
+  border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir2 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir2 .circle .explain {
+  position: absolute;
+  top: -23px;
+  left: 50px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir2 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir3 {
+  margin-bottom: 25px;
+}
+.skills-line .cir3 .circle {
+  width: 49px;
+  height: 49px;
+  background: #8490c8;
+  border-radius: 50%;
+  line-height: 49px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir3 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir3 .circle .explain {
+  position: absolute;
+  top: -6px;
+  left: 56px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir3 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir3 .row-line {
+  width: 90px;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  float: left;
+  transform: translateY(-26px) translateX(-115px);
+  margin-left: 0;
+}
+.skills-line .cir3 .introduce {
+  float: left;
+  transform: translateY(-35px) translateX(-367px);
+  margin-left: 0;
+}
+.skills-line .cir4 {
+  margin-bottom: 17px;
+}
+.skills-line .cir4 .circle {
+  width: 94px;
+  height: 94px;
+  background: #005bab;
+  border-radius: 50%;
+  line-height: 150px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir4 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir4 .circle .explain {
+  position: absolute;
+  top: 19px;
+  left: -190px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir4 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir4 .row-line {
+  width: 90px;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  float: left;
+  transform: translateY(-45px);
+  margin-left: 47px;
+}
+.skills-line .cir4 .introduce {
+  float: left;
+  transform: translateY(-67px);
+  margin-left: 146px;
+}
+.skills-line .cir5 {
+  margin-bottom: 30px;
+}
+.skills-line .cir5 .circle {
+  width: 41px;
+  height: 41px;
+  background: #f9ad81;
+  border-radius: 50%;
+  line-height: 0;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir5 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir5 .circle img {
+  transform: translateY(-12px);
+}
+.skills-line .cir5 .circle .explain {
+  position: absolute;
+  top: -7px;
+  left: 50px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir5 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir6 {
+  margin-bottom: 19px;
+}
+.skills-line .cir6 .circle {
+  width: 78px;
+  height: 78px;
+  background: #8490c8;
+  border-radius: 50%;
+  line-height: 92px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir6 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir6 .circle .explain {
+  position: absolute;
+  top: 10px;
+  left: 90px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir6 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir6 .row-line {
+  width: 90px;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  float: left;
+  transform: translateY(-40px) translateX(-129px);
+  margin-left: 0;
+}
+.skills-line .cir6 .introduce {
+  float: left;
+  transform: translateY(-50px) translateX(-356px);
+  margin-left: 0;
+}
+.skills-line .cir7 {
+  margin-bottom: 17px;
+}
+.skills-line .cir7 .circle {
+  width: 55px;
+  height: 55px;
+  background: #358aa5;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir7 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir7 .circle .explain {
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir7 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir8 {
+  margin-bottom: 17px;
+}
+.skills-line .cir8 .circle {
+  width: 69px;
+  height: 69px;
+  background: #ffdc50;
+  border-radius: 50%;
+  line-height: 88px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir8 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir8 .circle .explain {
+  position: absolute;
+  top: -12px;
+  left: -190px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+}
+.skills-line .cir8 .circle:hover .explain {
+  opacity: 1;
+}
+.skills-line .cir8 .row-line {
+  width: 90px;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  float: left;
+  transform: translateY(-32px);
+  margin-left: 34px;
+}
+.skills-line .cir8 .introduce {
+  float: left;
+  transform: translateY(-42px);
+  margin-left: 133px;
+}
+.skills-line .cir9 {
+  margin-bottom: 17px;
+}
+.skills-line .cir9 .circle {
+  width: 48px;
+  height: 48px;
+  background: #7ea2fc;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  transform: translateX(-50%);
+  position: relative;
+  cursor: pointer;
+}
+.skills-line .cir9 .circle .text-img {
+  display: inline-block;
+}
+.skills-line .cir9 .circle .explain {
+  position: absolute;
+  top: -70px;
+  left: -418px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  text-align: left;
+  width: 400px;
+}
+.skills-line .cir9 .circle:hover .explain {
+  opacity: 1;
+}
+#modalWindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #191b1f;
+  margin-top: 233px;
+  transition: top 12s;
+}

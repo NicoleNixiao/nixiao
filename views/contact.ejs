@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nixiao</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/jquery.ripples.js"></script> 
+    <script src="/js/index.js"></script> 
+    <script src="/js/vue.min.js"></script>
+</head>
+<body>
+    <% include header.ejs %>
+    <section class="contact">   
+        <div class="center-block">
+            <img class="tit" src="/images/contact/cancat.png" alt="">
+            <section class="girl">
+                <p class="in">
+                    <img class="me" src="/images/contact/me.png" alt="">
+                </p>
+            </section>
+            <form method="post" action="/doPostUserMsg" enctype="multipart/form-data">
+                <div class="box">
+                    <label for="name" class="forname" data-num = "0"></label>
+                    <p class="input-bg">
+                        <img class="yournameImg" src="/images/contact/yourname.png" alt="">
+                        <input type="text" autocomplete="off" class="yourinput" id="name" data-num = "0" value="" @focus = "getFocus($event)" @blur="blurStatus($event)">
+                    </p>
+                </div>
+                <div class="box">
+                    <label for="formail" class="formail" data-num = "1"></label>
+                    <p class="input-bg">
+                        <img class="yournameImg mail" src="/images/contact/youre-mail.png" alt="">
+                        <input type="text" autocomplete="off" class="yourinput yourinput1 " id="formail" value="" data-num = "1" @focus = "getFocus($event)" @blur="blurStatus($event)">
+                    </p>
+                </div>
+                <div class="box">
+                    <label for="formsg" class="formsg" data-num = "2"></label>
+                    <p class="input-bg big">
+                        <img class="yournameImg" src="/images/contact/yourmessage.png" alt="">
+                        <textarea class="yourinput" autocomplete="off" id="formsg" data-num = "2" name="" value=""  cols="30" rows="10" @focus = "getFocus($event)" @blur="blurStatus($event)">
+                        </textarea>
+                    </p>
+                </div>
+                <div class="box">
+                    <label for="send" class="send"></label>
+                    <button type="button" class="input-bg small NicoleBtn" @click="submit">
+                        <img src="/images/contact/send.png" alt="">   
+                    </button>
+                </div>
+                <p class="thanks"></p>
+            </form>
+        </div>
+    </section>
+<script>
+    $('.contact').ripples({
+        resolution: 512,
+        dropRadius: 15, //px
+        perturbance: 0.07,
+    });
+</script>    
+<script>
+         //设置service屏幕高度
+        var screenH = window.screen.availHeight;
+        var contact = document.getElementsByClassName("contact");
+        setScreenHeight(contact[0],screenH);
+        //设置canvas的高度
+        var canvas = document.getElementsByTagName("canvas")[0];
+        canvas.height = screenH;
+    
+        // //表单获取焦点事件
+        // const yourinput = document.getElementsByClassName("yourinput");
+        // var yournameImg = document.getElementsByClassName("yournameImg");
+        // yourinput[0].onfocus = function(){
+        //     yournameImg[0].style.display = "none";
+            
+        // }
+</script>
+<script>
+    new Vue({
+        el:"form",
+        methods:{
+            getFocus:function(e){
+                var index = e.target.getAttribute("data-num");
+                $(".yournameImg").eq(index).css("display","none");
+                $(".yourinput").eq(index).css("width","100%");
+                $(".thanks").text("");
+            },
+            blurStatus:function(e){
+                var index = e.target.getAttribute("data-num");
+                if(e.target.value == ""){
+                    $(".yournameImg").eq(index).css("display","block");
+                }                
+                $(".yourinput").eq(index).css("width","58%");
+            },
+            submit:function(){
+                let name = $("#name").val();
+                let formail = $("#formail").val();
+                let formsg = $("#formsg").val();
+                $(".thanks").text("");
+                if(name == ''){
+                    $(".thanks").text("姓名不能为空");
+                }else if(formail == ''){
+                    $(".thanks").text("联系方式不能为空");
+                }
+                $.post("/doPostUserMsg",{
+                    "name":$("#name").val(),
+                    "formail":$("#formail").val(),
+                    "formsg":$("#formsg").val(),
+                },function(result){
+                    if(result == -3){
+                        alert("服务器错误");
+                    }
+                    if(result == 1){
+                        $(".thanks").text("感谢您的参与，稍后与您联系");
+                    }
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

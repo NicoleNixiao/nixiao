@@ -1,0 +1,89 @@
+@import 'reset.css';
+@import 'public.css';
+.works {
+    background-color: #fafafa;
+  }
+.particle {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+}
+.works-title{
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 28%;
+}
+.paddingt20{
+    padding-top: 20px;
+}
+.boutique{
+    width: 806px;
+    height: 100%;
+    margin: 25px auto;
+    position: relative;
+}
+.pos(@top,@left){
+    position: absolute;
+    top:@top;
+    left:@left;
+    cursor: pointer;
+}
+.boutique-show{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    z-index: 12;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    img{
+        display: inline-block;
+        transform: translateY(50%);
+    }
+}
+//animation: boutiqueAnimation 40s infinite linear; transform-origin:center center;
+.boutique:hover{
+    p{
+        animation: none;
+    }
+}
+.boutique1{.pos(0,204px); animation: boutiqueAnimation 8s infinite linear; }
+.boutique2{
+    .pos(107px,332px);
+    .boutique-show{.boutique-show}
+    animation: boutiqueAnimation 9s infinite linear;
+}
+.boutique3{
+    .pos(40px,554px);
+    .boutique-show{.boutique-show}
+    animation: boutiqueAnimation 5s infinite linear;
+}
+.boutique4{.pos(192px,98px);.boutique-show{.boutique-show} animation: boutiqueAnimation 8s infinite linear;}
+.boutique5{.pos(301px,202px);.boutique-show{.boutique-show} animation: boutiqueAnimation 8s infinite linear;}
+.boutique6{.pos(301px,458px); animation: boutiqueAnimation 12s infinite linear;}
+.boutique7{.pos(223px,732px); animation: boutiqueAnimation 9s infinite linear;}
+.boutique8{.pos(399px,645px);.boutique-show{.boutique-show} animation: boutiqueAnimation 7s infinite linear; }
+@keyframes boutiqueAnimation {
+    0%{
+        transform: rotateZ(5deg);
+    }
+    25%{
+        transform: rotateZ(-5deg);
+    }
+    50%{
+        transform: rotateZ(5deg);
+    }
+    75%{
+        transform: rotateZ(-5deg);
+    }
+    100%{
+        transform: rotateZ(5deg);
+    }
+}
+
+
