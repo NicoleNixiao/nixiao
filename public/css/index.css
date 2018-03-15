@@ -6,6 +6,16 @@
   background-size: cover;
   padding-top: 142px;
 }
+.img-banner .tell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+}
 .base-on-title {
   margin-bottom: 74px;
   opacity: 0;
