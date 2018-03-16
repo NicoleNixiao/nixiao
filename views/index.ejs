@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/css/index.css">
     <script src="/js/jquery-1.10.2.min.js"></script>
     <script src="/js/jquery.ripples.js"></script> 
-    <script src="/js/index.js"></script>  
 </head>
 <style>
     .nav-span:nth-of-type(1){transform: translateY(-7px) rotateY(-15deg)}
@@ -38,10 +37,6 @@
 </script>    
 <script>
     window.onload = function(){
-        //设置首页屏幕高度
-        var screenH = window.screen.availHeight;
-        var imgBanner = document.getElementsByClassName("img-banner");
-        setScreenHeight(imgBanner[0],screenH)
         //设置首页文字的初始动画
         var baseOnTitle = document.getElementById("baseOnTitle");
         var poem = document.getElementById("poem");
@@ -49,10 +44,9 @@
         baseOnTitle.style.opacity = 1;
         poem.style.transform = "translateY(0)";
         poem.style.opacity = 1;
-
         //设置canvas的高度
-       var canvas = document.getElementsByTagName("canvas")[0];
-       canvas.height = screenH;
+       //var canvas = document.getElementsByTagName("canvas")[0];
+       //canvas.height = screenH;
 
        //导航栏的当前位置
         // var navspans = document.getElementsByClassName("nav-span");

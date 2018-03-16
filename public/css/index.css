@@ -16,6 +16,16 @@
   width: 100%;
   padding-top: 15px;
 }
+.img-banner::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+.img-banner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .base-on-title {
   margin-bottom: 74px;
   opacity: 0;

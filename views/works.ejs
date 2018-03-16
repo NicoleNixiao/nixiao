@@ -78,10 +78,6 @@
 <script src="/js/service/particles.js"></script>
 <script src="/js/service/app.js"></script>
 <script>
-        //设置service屏幕高度
-        var screenH = window.screen.availHeight;
-        var works = document.getElementsByClassName("works");
-        setScreenHeight(works[0],screenH);
 
         //设置canvas的高度
         var canvas = document.getElementsByTagName("canvas")[0];
@@ -99,7 +95,6 @@
             Show:function(e){
                 let index = e.target.getAttribute("data-num");
                 $(".boutique-show").eq(index).css("display","block");
-                $(".boutique-show").eq(index).$("img").css("display","block");
             }
         }
     })
